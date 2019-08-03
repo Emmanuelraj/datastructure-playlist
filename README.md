@@ -11,10 +11,13 @@ datastructure-playlist string arrays sorting interview programs for beginners
             before pushing git repo in remote existing project 
             
             Step 1:
-                  git remote add upstream https://github.com/Emmanuelraj/datastructure-playlist.git
+                  git remote add origin https://github.com/Emmanuelraj/datastructure-playlist.git  
+                  Note (origin is remote )
             Step 2:
-                   git pull upstream master
+                   git pull origin master
+                     Note (origin is remote )
             Steo 3
-                   git push -u origin (specified branch)
+                   git push -u origin master (specified branch)
+                   
                   
     

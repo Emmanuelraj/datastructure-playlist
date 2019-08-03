@@ -2,26 +2,20 @@
  * 
  */
 package com.project.dailycoding;
-
-
-
-
-
-
-
 /**
  * @author Emmanuel Raj
  * 
  * Hi, here's your problem today. This problem was recently asked by Google:
 
 Given a singly-linked list, reverse the list. This can be done iteratively or recursively. Can you get both solutions?
-
 Example:
 Input: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
 Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL
+
+working
+run one method after another comments
+ 
  */
-
-
 class ListNode
 {
 
@@ -51,7 +45,7 @@ class ListNode
 		System.out.println("count-->"+count);
 		return head;
 	}
-    //print node
+	//print node
 	static void printNode(ListNode node) 
 	{
 		System.out.println("printNode");
@@ -61,55 +55,55 @@ class ListNode
 			System.out.println(node.data);
 			node = node.next; //
 		}		
-			
+
 	}
-    //reverseListNode by iteratively
+	//reverseListNode by iteratively
 	public static ListNode reverseListNodesIt(ListNode head)
 	{
 		System.out.println("reverseListNodes");
-		
+
 		ListNode prev = null;
 		ListNode current = head;
 		ListNode next = null;
-		
-		 if(current!=null)
-		 {
-			 while(current!=null)
-			 {
-				 next =current.next;
-				 current.next=prev;
-				 prev = current;
-				 current= next;
-			 }
-		 }
-		 
-		 head = prev;
-		 return head;
+
+		if(current!=null)
+		{
+			while(current!=null)
+			{
+				next =current.next;
+				current.next=prev;
+				prev = current;
+				current= next;
+			}
+		}
+
+		head = prev;
+		return head;
 
 	}
 	//using recursively
 	public static ListNode reverseListNodesRec(ListNode head)
 	{
 		System.out.println("reverseListNodes");
-		
+
 		ListNode prev = null;
 		ListNode current = head;
 		ListNode next = null;
-		
-		 if(current!=null)
-		 {
-			 System.out.println("rec val data ====>"+current.data);
-			 current = current.next;
-			 reverseListNodesRec(current);
-		 }
-		 
-		 head = prev;
-		 return head;
+
+		if(current!=null)
+		{
+			System.out.println("rec val data ====>"+current.data);
+			current = current.next;
+			reverseListNodesRec(current);
+		}
+
+		head = prev;
+		return head;
 
 	}
-	
-	
-	
+
+
+
 
 
 }
@@ -135,13 +129,13 @@ public class ReverseLinkedList
 		nodeB.next = nodeC;
 		nodeC.next = nodeD;
 		nodeD.next = nodeE;
-		
 
-        //for print count of List
+
+		//for print count of List
 		//ListNode.printNode(ListNode.linkedListNode(head));
 		//for iteratively
 		ListNode.printNode(ListNode.reverseListNodesIt(head));
-		
+
 		//for recursively
 		//ListNode.printNode(ListNode.reverseListNodesRec(head));
 

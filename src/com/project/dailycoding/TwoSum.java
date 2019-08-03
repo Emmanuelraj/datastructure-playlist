@@ -71,5 +71,3 @@ public class TwoSum {
 		boolean b = two.two_sumBubbleSort(ls,7);
         System.out.println(b);
 	}
-
-}
